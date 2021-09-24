@@ -1,0 +1,175 @@
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap');
+
+
+* {
+    /* outline: 1px solid red; */
+    font-family: 'Red Hat Display', sans-serif;
+    font-size: 16px;
+    text-align: center;
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    --pale-blue: hsl(225,100%,94%);
+    --bright-blue: hsl(245,75%,52%);
+    --very-pale-blue: hsl(225,100%,98%);
+    --desaturated-blue: hsl(224,23%,55%);
+    --dark-blue: hsl(223,47%,23%);
+}
+
+body {
+    width: 100%;
+    min-height: 100vh;
+    height: auto;
+    padding: 50px;
+    background: var(--pale-blue) url(./images/pattern-background-desktop.svg) no-repeat ;
+    background-size: contain;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+}
+
+.card {
+    width: 450px;
+    height: auto;
+    border-radius: 20px;
+    background-color:white ;
+    overflow: hidden;
+    box-shadow: 0px 15px 10px hsl(224,100%,92%) ;
+}
+
+
+.body {
+    margin:25px 50px;
+}
+
+.content {
+    
+    margin-bottom: 25px;
+}
+
+.content h1 {
+    font-weight: 900;
+    font-size: 22px;
+    margin: 12px;
+}
+
+.content p {
+    color: var(--desaturated-blue);
+}
+
+.plan-container {
+    margin-bottom: 25px;
+    padding: 25px;
+    border-radius: 15px;
+    background-color: var(--very-pale-blue);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.plan {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    align-items: center;
+}
+
+.plan-details {
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.plan-details div {
+    font-weight: 900;
+    font-size: 18px;
+}
+
+.plan-details p {
+    color: var(--desaturated-blue);
+    text-align: start;
+}
+
+.plan-container a{
+    color: var(--bright-blue);
+    font-weight: 900;
+}
+
+.plan-container a:hover {
+    text-decoration: none;
+    color: var(--desaturated-blue);
+}
+
+.actions {
+    
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.actions button {
+    padding: 15px 0px;
+    border-radius: 10px;
+    border: 0px;
+    cursor: pointer;
+    font-weight: 700;
+}
+
+button.cta {
+    background-color: var(--bright-blue);
+    box-shadow:  0px 15px 10px var(--pale-blue);
+    color: white;
+}
+
+button.cta:hover {
+    background-color: var(--desaturated-blue);
+}
+
+button.ghost {
+    background-color: white;
+    color: hsl(224,23%,55%);
+}
+button.ghost:hover {
+    color: black;
+}
+
+
+
+.attribution {
+    width: 400px;
+    padding: 5px;
+    background-color: black;
+    color: beige;
+    border-radius: 5px; 
+    text-align: center;
+    
+  }
+
+  .attribution a {
+    color: aqua;
+    text-decoration: none;
+  }
+
+@media (max-width: 480px) {
+    .card {
+        width: calc(100vw - 40px);
+        height: auto;
+    }
+
+    .body {
+        margin: 25px;
+    }
+    .attribution {
+        font-size: 0.75rem;
+        width: calc(100vw - 40px);
+    }
+}
+
+@media (max-width: 400px) {
+    .plan-details div, .plan-details p, .plan-container a {
+        font-size: 14px;
+    }
+}
