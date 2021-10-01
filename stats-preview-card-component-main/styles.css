@@ -1,0 +1,117 @@
+@import url("https://fonts.googleapis.com/css2?family=Lexend+Deca&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap");
+
+:root {
+  --main-background: hsl(237, 47%, 7%);
+  --card-background: hsl(244, 38%, 16%);
+  --accent: hsl(277, 64%, 61%);
+  --white: hsl(0, 0%, 100%);
+  --main-paragraph: hsla(0, 0%, 100%, 0.75);
+  --stat-headings: hsla(0, 0%, 100%, 0.6);
+}
+
+* {
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+  font-size: 15px;
+}
+
+body {
+  height: 100vh;
+  width: 100vw;
+  padding: 150px;
+  background-color: var(--main-background);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  width: 1080px;
+  height: 446px;
+  background-color: var(--card-background);
+  border-radius: 10px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  overflow: hidden;
+}
+
+.content-container {
+  padding: 75px;
+}
+
+.content-container h1,
+span {
+  margin-bottom: 24px;
+  color: var(--white);
+  font-size: 32px;
+  font-family: "Inter";
+}
+
+.content-container span {
+  color: var(--accent);
+}
+
+.content-container p {
+  color: var(--main-paragraph);
+  font-family: "Lexend Deca";
+}
+
+.content-container .stats {
+  margin: 75px 0px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  color: var(--white);
+}
+
+.content-container .stat {
+  display: flex;
+  flex-direction: column;
+}
+
+.content-container .stat-metric {
+  font-size: 24px;
+  font-weight: 700;
+  font-family: Inter;
+  color: var(--white);
+}
+
+.content-container .stat-heading {
+  text-transform: uppercase;
+  color: var(--stat-headings);
+}
+
+.image-container {
+  background: var(--accent) url(./images/image-header-desktop.jpg) no-repeat;
+  background-size: cover;
+  background-blend-mode: multiply;
+}
+
+@media (max-width: 1080px) {
+  * {
+    text-align: center;
+  }
+  body {
+    padding: 24px;
+  }
+  .container {
+    display: flex;
+    flex-direction: column;
+    height: auto;
+  }
+  .content-container {
+    order: 2;
+    padding: 24px;
+  }
+  .image-container {
+    height: 250px;
+    order: 1;
+  }
+
+  .content-container .stats {
+    margin: 50px 0px;
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+}
